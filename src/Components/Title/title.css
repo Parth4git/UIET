@@ -1,0 +1,27 @@
+.title{
+    width: 50%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: #000;
+    margin: 20px 0;
+
+
+}
+
+p{
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    margin: 20px 0;
+}
