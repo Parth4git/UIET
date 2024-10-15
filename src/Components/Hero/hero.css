@@ -1,7 +1,8 @@
-.hero{
+/* Main hero section */
+.hero {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)), url(../.././assets/uiet-campus.jpg);
+    background: linear-gradient(rgba(5, 0, 35, 0.7), rgba(3, 3, 39, 0.7)), url(../.././assets/uiet-campus.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -10,7 +11,8 @@
     background-repeat: no-repeat;
 }
 
-.hero-container{
+/* Hero container */
+.hero-container {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -18,24 +20,27 @@
     align-items: center;
     margin: 0 auto;
     padding: 0 20px;
+}
 
-}   
-
-.hero-heading{
+/* Hero heading */
+.hero-heading {
     font-size: 50px;
-    color: #fff;
+    color: #e4c8f4;
+    text-align: center;
+}
+
+/* Hero paragraph */
+.hero-para {
+    padding: 20px 150px;
+    padding-top: 200px;
+    font-size: 28px;
+    color: #e3deec;
     text-align: center;
     margin: 20px 0;
 }
 
-.hero-para{
-    font-size: 20px;
-    color: #fff;
-    text-align: center;
-    margin: 20px 0;
-}
-
-.hero-btn{
+/* Hero button */
+.hero-btn {
     padding: 10px 20px;
     background-color: #fff;
     color: #000;
@@ -43,4 +48,54 @@
     border-radius: 10px;
     font-size: 20px;
     cursor: pointer;
+}
+
+/* Responsive Media Queries */
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    .hero-heading {
+        font-size: 40px;
+        /* Reduce heading size */
+    }
+
+    .hero-para {
+        padding: 20px 50px;
+        /* Reduce padding */
+        font-size: 22px;
+        /* Smaller font size */
+        padding-top: 100px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .hero-btn {
+        font-size: 18px;
+        /* Smaller button font */
+        padding: 8px 16px;
+        /* Adjust button padding */
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .hero-heading {
+        font-size: 32px;
+        /* Further reduce heading size */
+    }
+
+    .hero-para {
+        padding: 20px 20px;
+        /* Minimize padding on mobile */
+        font-size: 18px;
+        /* Smaller font size for readability */
+        padding-top: 50px;
+        /* Adjust top padding */
+    }
+
+    .hero-btn {
+        font-size: 16px;
+        /* Smaller font size for button */
+        padding: 6px 14px;
+        /* Reduce button padding for mobile */
+    }
 }

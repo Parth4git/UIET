@@ -1,12 +1,12 @@
 import React from "react";
-import "./project.css";
+import "./courses.css";
 import Bca from "../.././assets/bca.jpg";
 import Btech from "../.././assets/btech.jpg";
 import Mtech from "../.././assets/mtech.jpg";
 import Mca from "../.././assets/mca.jpg";
 import Fashion from "../.././assets/fashion.jpg";
 
-const project = () => {
+const courses = () => {
   return (
     <div className="project">
       <div className="project-container">
@@ -33,4 +33,4 @@ const project = () => {
   );
 };
 
-export default project;
+export default courses;

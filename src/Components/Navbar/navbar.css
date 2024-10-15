@@ -1,4 +1,5 @@
-.navbar{
+/* Main navbar */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,21 +14,90 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
-.logo{
+
+/* Logo */
+.logo {
     height: 50px;
     width: 50px;
 }
 
-.list{
+/* Navigation list */
+.list {
     display: flex;
     list-style: none;
     gap: 20px;
     font-weight: bold;
     font-size: 20px;
     color: #ffffff;
-   padding-right: 500px;
+    padding-right: 500px;
 }
 
-.dark-nav{
+/* Navigation link */
+.list li {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+/* Dark background for navbar */
+.dark-nav {
     background-color: #000;
+}
+
+/* Responsive Media Queries */
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 10px;
+        /* Reduce padding */
+        height: 60px;
+        /* Keep the height same */
+    }
+
+    .list {
+        gap: 15px;
+        /* Reduce the gap between menu items */
+        font-size: 18px;
+        /* Slightly smaller font size */
+        padding-right: 0;
+        /* Remove large padding */
+    }
+
+    .logo {
+        height: 45px;
+        /* Adjust logo size */
+        width: 45px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        /* Stack logo and list vertically */
+        height: auto;
+        /* Let height adjust automatically */
+        padding: 10px 20px;
+        /* Add padding for better spacing */
+    }
+
+    .list {
+        flex-direction: column;
+        /* Stack list items vertically */
+        gap: 10px;
+        /* Smaller gap between menu items */
+        font-size: 16px;
+        /* Further reduce font size */
+        padding-right: 0;
+        /* No padding */
+    }
+
+    .logo {
+        height: 40px;
+        /* Smaller logo for mobile */
+        width: 40px;
+        margin-bottom: 10px;
+        /* Add space between logo and menu */
+    }
 }

@@ -1,24 +1,82 @@
+
 .about-container {
-    width: 80%;
-    height: 50vh;
+    width: 90%;
+    height: auto;
+    /* Allow height to adjust based on content */
     display: flex;
+    flex-wrap: wrap;
+    /* Make elements stack on smaller screens */
     justify-content: space-between;
     align-items: center;
-    margin: 100px auto;
+    margin: 50px auto;
 }
 
+/* Image section */
 .about-img {
- flex-basis: 40%;
+    flex-basis: 45%;
+    margin-bottom: 20px;
+    /* Add spacing for smaller screens */
 }
 
 .about-img img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    /* Ensure the image scales properly */
     object-fit: cover;
     border-radius: 10px;
+    z-index: 1;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* Content section */
 .about-content {
-flex-basis: 55%;
-text-align: center;
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.about-content h3 {
+    font-size: 2rem;
+    color: #000;
+    margin: 20px 0;
+}
+
+.about-content p {
+    font-size: 1.25rem;
+    color: #000;
+    margin: 20px 0;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        /* Stack items vertically on smaller screens */
+        text-align: center;
+    }
+
+    .about-img,
+    .about-content {
+        flex-basis: 100%;
+        /* Full width for both sections */
+    }
+
+    .about-content h3 {
+        font-size: 1.8rem;
+        /* Slightly smaller font for smaller devices */
+    }
+
+    .about-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content h3 {
+        font-size: 1.5rem;
+        /* Further reduce font size on very small screens */
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
 }

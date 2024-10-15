@@ -1,0 +1,73 @@
+/* Main footer container */
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    height: 70px;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Footer text */
+.footer p {
+    font-size: 18px;
+}
+
+/* Footer list items */
+.footer ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+/* Responsive Media Queries */
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        /* Stack items vertically */
+        height: auto;
+        /* Adjust height based on content */
+        text-align: center;
+        /* Center text for better alignment */
+        padding: 10px;
+        /* Add padding for spacing */
+    }
+
+    .footer p {
+        font-size: 16px;
+        /* Slightly smaller font for smaller screens */
+    }
+
+    .footer ul li {
+        margin-left: 15px;
+        /* Reduce margin between list items */
+        font-size: 14px;
+        /* Smaller font for list items */
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 10px;
+        /* Reduce padding */
+    }
+
+    .footer p {
+        font-size: 14px;
+        /* Further reduce font size */
+    }
+
+    .footer ul li {
+        margin-left: 10px;
+        /* Further reduce margin between list items */
+        font-size: 13px;
+        /* Smaller font for list items on mobile */
+    }
+}

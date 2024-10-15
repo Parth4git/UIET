@@ -1,0 +1,97 @@
+
+ /* Main department container */
+ .department {
+     width: 90%;
+     height: auto;
+     /* Allow height to adjust based on content */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     margin: 0 auto;
+     padding: 0 20px;
+ }
+
+ /* Image section, with wrapping for smaller screens */
+ .department-img {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     /* Allows wrapping on smaller screens */
+     gap: 20px;
+ }
+
+ /* Department card */
+ .department-card {
+     width: 200px;
+     height: 250px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     border-radius: 10px;
+     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+     cursor: pointer;
+     transition: transform 0.3s, box-shadow 0.3s;
+     /* Smooth transition for hover effect */
+ }
+
+ /* Hover effect on department cards */
+ .department-card:hover {
+     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+     transform: scale(1.1);
+ }
+
+ /* Image inside department card */
+ .department-card img {
+     width: 100px;
+     height: 100px;
+     object-fit: cover;
+     border-radius: 10px;
+ }
+
+ .department-card p {
+     text-align: center;
+     font-size: 18px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+ /* Responsive Media Queries */
+
+ /* Tablet and smaller screens */
+ @media (max-width: 768px) {
+     .department-card {
+         width: 180px;
+         /* Slightly smaller cards */
+         height: 230px;
+     }
+
+     .department-card img {
+         width: 80px;
+         /* Smaller images */
+         height: 80px;
+     }
+ }
+
+ /* Mobile phones */
+ @media (max-width: 480px) {
+     .department {
+         width: 100%;
+         /* Full width for smaller screens */
+         padding: 0 10px;
+         /* Reduce padding */
+     }
+
+     .department-card {
+         width: 150px;
+         /* Further reduce card size */
+         height: 200px;
+     }
+
+     .department-card img {
+         width: 70px;
+         /* Smaller images for mobile */
+         height: 70px;
+     }
+ }
