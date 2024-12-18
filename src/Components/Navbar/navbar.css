@@ -50,54 +50,53 @@
 @media (max-width: 768px) {
     .navbar {
         padding: 0 10px;
-        /* Reduce padding */
         height: 60px;
-        /* Keep the height same */
-    }
-
-    .list {
-        gap: 15px;
-        /* Reduce the gap between menu items */
-        font-size: 18px;
-        /* Slightly smaller font size */
-        padding-right: 0;
-        /* Remove large padding */
     }
 
     .logo {
         height: 45px;
-        /* Adjust logo size */
         width: 45px;
     }
-}
 
-/* Mobile phones */
-@media (max-width: 480px) {
-    .navbar {
-        flex-direction: column;
-        /* Stack logo and list vertically */
-        height: auto;
-        /* Let height adjust automatically */
-        padding: 10px 20px;
-        /* Add padding for better spacing */
-    }
-
+    /* Hide the navigation list and show the menu icon */
     .list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
         flex-direction: column;
-        /* Stack list items vertically */
-        gap: 10px;
-        /* Smaller gap between menu items */
-        font-size: 16px;
-        /* Further reduce font size */
-        padding-right: 0;
-        /* No padding */
+        width: 100%;
+        background-color: rgba(48, 47, 47, 0.8);
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
-    .logo {
-        height: 40px;
-        /* Smaller logo for mobile */
-        width: 40px;
-        margin-bottom: 10px;
-        /* Add space between logo and menu */
+    /* Show navigation list when menu is open */
+    .list.menu-open {
+        display: flex;
+    }
+
+    /* Adjust menu items for smaller screens */
+    .list li {
+        padding: 10px 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Remove the right padding for navigation list */
+    .list {
+        padding-right: 0;
+    }
+
+    /* Menu icon styles */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        color: #ffffff;
+        position: absolute;
+            right: 20px;
+            /* Position it at the rightmost side */
+            top: 50%;
+            transform: translateY(-50%);
     }
 }
